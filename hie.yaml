@@ -1,0 +1,14 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "haskell-trees:lib"
+
+    - path: "./app/Main.hs"
+      component: "haskell-trees:exe:haskell-trees-exe"
+
+    - path: "./app/Paths_haskell-trees.hs"
+      component: "haskell-trees:exe:haskell-trees-exe"
+
+    - path: "./test"
+      component: "haskell-trees:test:haskell-trees-test"
+
