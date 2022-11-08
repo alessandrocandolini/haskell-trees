@@ -31,7 +31,9 @@ jobs:
       id: cache
       uses: actions/cache@v3
       with:
-        path: ~/.stack
+        path: | 
+          ~/.stack
+          ~/.ghcup
         key: ${{ runner.os }}-${{ matrix.ghc }}-stack${{ matrix.stack }}
 
     - name: Setup Haskell Stack
