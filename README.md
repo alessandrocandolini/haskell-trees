@@ -1,3 +1,5 @@
+[![CI](https://github.com/alessandrocandolini/haskell-trees/actions/workflows/ci.yml/badge.svg)](https://github.com/alessandrocandolini/haskell-trees/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/alessandrocandolini/haskell-trees/branch/main/graph/badge.svg?token=PmvCqUrxgr)](https://codecov.io/gh/alessandrocandolini/haskell-trees)
+
 # haskell-trees
 
 ## How to build and run locally
