@@ -12,6 +12,9 @@ dependencies:
 - optparse-generic
 - aeson
 - generic-aeson
+- raw-strings-qq
+- neat-interpolation
+- transformers
 
 default-extensions:
 - OverloadedStrings
