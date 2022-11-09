@@ -1,7 +1,7 @@
 {-# LANGUAGE QuasiQuotes #-}
 module AppSpec where
 
-import App (pretty)
+import Tree (pretty)
 import Examples (one, basic1, basic2, basic3, more)
 import Test.Hspec ( describe, it, shouldBe, Spec )
 import Test.Hspec.QuickCheck ( prop )

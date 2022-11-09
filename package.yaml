@@ -15,10 +15,11 @@ dependencies:
 - raw-strings-qq
 - neat-interpolation
 - transformers
+- GenericPretty
 
 default-extensions:
 - OverloadedStrings
-- OverloadedLists  
+- OverloadedLists
 
 ghc-options:
   - -Wall

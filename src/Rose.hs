@@ -1,5 +1,5 @@
 module Rose where 
-import App
+import Tree
 import Data.List.NonEmpty
 
 data Rose a = Rose {

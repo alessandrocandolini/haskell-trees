@@ -1,6 +1,6 @@
 module Examples where 
 
-import App 
+import Tree
 
 one:: Tree Int
 one = Leaf 1
