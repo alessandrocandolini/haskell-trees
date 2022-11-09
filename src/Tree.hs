@@ -19,8 +19,11 @@ instance (Out a) => Out (NonEmpty a) where
 
 
 
-separator :: String
-separator = "-"
+separator :: Depth -> String
+separator (Depth 0) = "|--"
+separator _ = "--"
+
+
 
 newtype Depth = Depth Int deriving (Eq,Show)
    deriving Num via Int
@@ -35,5 +38,5 @@ labelling (Node a bs) = undefined
 
 pretty :: Show a => Tree a -> Text
 pretty (Leaf a) = pack $ show a
-pretty (Node a ( Leaf a2 :| [] )) = pack ( show a ++ "\n" ++ "-" ++ show a2)
+pretty (Node a ( Leaf a2 :| [] )) = pack ( show a ++ "\n" ++ separator (Depth 0) ++ show a2)
 pretty (Node a _) = "???"

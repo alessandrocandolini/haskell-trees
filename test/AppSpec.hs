@@ -19,36 +19,36 @@ spec = describe "Simple test" $ do
      it "Example 2 (one node, one leaf)" $
         pretty basic1 `shouldBe` [trimming|
            1
-           -2
+           |--2
           |]
      
      it "Example 3 (one node, one branch, one leaf)" $
         pretty basic2 `shouldBe` [trimming|
            1
-           -2
-           --3
+           |--2
+           |--3
           |]
 
      it "Example 4 (one node, two leafs)" $
         pretty basic3 `shouldBe` [trimming|
            1
-           -2
-           -3
+           |--2
+           |--3
           |]
 
 
      it "Example 5 (a more complex, nested tree)" $
         pretty more `shouldBe` [trimming|
            1
-           -2
-           --3
-           --4
-           -5
-           --6
-           --7
-           ---8
-           ---9
-           ---10
+           |--2
+           |----3
+           |----4
+           |--5
+           |----6
+           |----7
+           |------8
+           |------9
+           |------10
            |]
 
      prop "property-based unit test" $
