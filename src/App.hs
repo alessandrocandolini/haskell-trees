@@ -2,22 +2,23 @@
 module App where
 import Data.Text as T
 import Control.Monad.State
+import Data.List.NonEmpty
 
 
 program :: IO ()
 program = putStrLn "hello!"
 
 -- Update to non empty
-data Tree a = Leaf a | Node a [Tree a] deriving (Eq, Show)
+data Tree a = Leaf a | Node a (NonEmpty (Tree a)) deriving (Eq, Show)
 
 one:: Tree Int
 one = Leaf 1
 
 basic :: Tree Int
-basic = Node 1 [Leaf 2, Leaf 3]
+basic = Node 1 (Leaf 2 :| [Leaf 3])
 
 more :: Tree Int
-more = Node 1 [ Node 2 [Leaf 3, Leaf 4], Node 5 [Leaf 6, Node 7 [Leaf 8, Leaf 9, Leaf 10]]]
+more = Node 1 ( Node 2 (Leaf 3 :| [Leaf 4]) :| [Node 5 (Leaf 6 :| [Node 7 (Leaf 8 :| [Leaf 9, Leaf 10])])] )
 
 separator :: String
 separator = "-"
