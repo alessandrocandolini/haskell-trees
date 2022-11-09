@@ -2,6 +2,14 @@
 
 # haskell-trees
 
+An exploraration of purely functional representation and manipulation of tree-like data structures using Haskell, including:
+* equivalent representations
+* non-equivalent representations
+* modified preorder tree traversal 
+* traversing a tree using the State monad
+* what recursion schemes can do for us when working with trees
+* and more
+
 ## How to build and run locally
 
 The project uses the [Haskell tool stack](https://docs.haskellstack.org/en/stable/README/).
